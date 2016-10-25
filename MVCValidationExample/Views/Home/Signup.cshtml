@@ -1,0 +1,25 @@
+﻿<span style="font-family: inherit;">
+
+    @model MVCValidationExample.Models.Register
+
+    @{
+        ViewBag.Title = "Signup";
+    }
+
+    <h2>Signup Page</h2>
+
+
+    @if (ViewBag.Success != null)
+    {
+        <h3>@ViewBag.Success</h3>
+    }
+
+    @using (Html.BeginForm())
+    {
+        @Html.EditorForModel("Register")
+
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+    }
+</span>
+
